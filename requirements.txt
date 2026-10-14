@@ -1,0 +1,7 @@
+lambda-support-recovery @ git+https://github.com/Bi-xuan/lambda-support-recovery.git@9801ad7eba256d156deb9505f413c4c48146f0d7
+maximal-class-graph @ git+https://github.com/Bi-xuan/maximal_class_graph.git@9d14f04c9b09518fd57ccecbc9b5e3951e7a7519
+numpy==2.4.6
+pandas==3.0.6
+python-dateutil==2.9.0.post0
+scipy==1.17.1
+six==1.17.0
