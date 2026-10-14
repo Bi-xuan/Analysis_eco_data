@@ -1,8 +1,9 @@
-#!/bin/bash
+#$ -S /bin/bash
+#$ -N eco_data
 #$ -q long.q
 #$ -cwd
 #$ -V
-#$ -pe thread 20
+#$ -pe thread 100
 #$ -j y
 #$ -o experiments/output
 #$ -M liubixuan214@gmail.com
@@ -22,13 +23,13 @@ METHOD="${METHOD:-plateau-bootstrap}"
 SUPPORT_SCOPE="${SUPPORT_SCOPE:-upper}"
 OMEGA_REF="${OMEGA_REF:-none}"
 FIT_OMEGA_REF="${FIT_OMEGA_REF:-true}"
-OUTPUT_ROOT="${OUTPUT_ROOT:-experiments/output/lambda_support_recovery}"
+OUTPUT_ROOT="${OUTPUT_ROOT:-experiments/output/rodent_flea}"
 PYTHON_BIN="${PYTHON_BIN:-python}"
 MAX_RESTARTS="${MAX_RESTARTS:-10}"
 MAX_ITER="${MAX_ITER:-800}"
 BOOTSTRAP_REPLICATES="${BOOTSTRAP_REPLICATES:-199}"
 
-export TOTAL_CPUS="${NSLOTS:-20}"
+export TOTAL_CPUS="${NSLOTS:-100}"
 # The package uses worker processes; keep numerical libraries to one thread each.
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 export BLIS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1
